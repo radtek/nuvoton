@@ -130,7 +130,7 @@ BOOL CNuvoISPDlg::OnInitDialog()
     CMenu* pSysMenu = GetSystemMenu(FALSE);
     if (pSysMenu != NULL) {
         CString strAboutMenu;
-        strAboutMenu = _T("About Nuvoton NuMicro ISP Programming Tool(&A)");
+        strAboutMenu = _T("About   ISP Programming Tool(&A)");
         if (!strAboutMenu.IsEmpty()) {
             pSysMenu->AppendMenu(MF_SEPARATOR);
             pSysMenu->AppendMenu(MF_STRING, IDM_ABOUTBOX, strAboutMenu);
@@ -147,7 +147,7 @@ BOOL CNuvoISPDlg::OnInitDialog()
     UpdateData(FALSE);
 
     // Title
-    SetWindowText(_T("Nuvoton NuMicro ISP Programming Tool 2.00"));
+    SetWindowText(_T("  ISP Programming Tool 2.00"));
     SetDlgItemText(IDC_STATIC_FILEINFO_APROM, _I(IDS_FILE_NOT_LOAD));
     SetDlgItemText(IDC_STATIC_FILEINFO_NVM, _I(IDS_FILE_NOT_LOAD));
 
@@ -632,7 +632,7 @@ void CNuvoISPDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
-		CAboutDlg dlgAbout(_T("http://www.nuvoton.com/NuMicro/"));
+		CAboutDlg dlgAbout(_T("http://www.OS-Q.com/ISP/"));
 		dlgAbout.DoModal();
 	}
 	else{
